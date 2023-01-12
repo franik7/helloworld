@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Document</title>
+</head>
+
+<body>
+	<script>
+		a = 45;
+		console.log(a);
+		console.log(a + 5, a - 46, a * 5, a / 9);
+		console.log(a);
+
+		a = a + 2;
+		console.log(a);
+
+		a = a - 2;
+		console.log(a);
+
+		a -= 2;
+		console.log(a);
+
+		++a;
+		console.log(a);
+
+		name = 'Joe';
+		console.log('I just saw ' + name + ' over there')
+
+		dairy = ['eggs', 'milk', 'yogurt'];
+		frozen = ['juice', 'ice cream', 'cake'];
+		canned = ['coffee', 'fruit', 'beans']
+
+		grocerylist = [dairy, frozen, canned];
+		console.log(grocerylist, grocerylist[1], grocerylist[1][1]);
+
+		console.log(grocerylist[0].indexOf('butter'));
+		console.log(grocerylist[0].indexOf('milk'));
+
+		if (grocerylist[0].indexOf('butter') == -1) {
+			console.log(`Don't forget the Butter`);
+		};
+
+		for (s in grocerylist) {
+			//			console.log(grocerylist[s]);
+			for (t in grocerylist[s]) {
+				console.log(grocerylist[s][t]); // extracts full list of groceries to print ecverty single item
+			}
+		}
+
+		prod1 = {
+			name: 't-shirt',
+			price: 60
+		}
+
+		prod2 = {
+			name: 'pants',
+			price: 80
+		}
+
+		cart = [prod1, prod2];
+		console.log(cart);
+
+
+		function carttotals() {
+
+			subtotal = 0;
+			for (u in cart) {
+				v = cart[u].price;
+				subtotal += v;
+				console.log(v);
+
+			}
+			console.log('completed loop')
+			console.log(subtotal);
+			console.log("grandtotal: " + (subtotal * 1.0825));
+		};
+	</script>
+</body></html>
